@@ -3,6 +3,7 @@ import React from 'react'
 import { WebView } from 'react-native-webview'
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
+import Colores from '../lib/Colores'
 import Producto1 from '../Media/Productos/a.jpg'
 import Producto2 from '../Media/Productos/b.png'
 import Producto3 from '../Media/Productos/c.png'
@@ -71,26 +72,26 @@ const HomeScreen = ({ navigation }) => {
 export default HomeScreen
 
 const styles = StyleSheet.create({
-    container: { flex: 1 },
+    container: { flex: 1, backgroundColor: Colores.fondo },
     contenido: { paddingHorizontal: 10, paddingBottom: 20 },
     logoContainer: { alignItems: 'center', paddingVertical: 20 },
     logo: { width: 120, height: 120, borderRadius: 60 },
-    titulo: { fontSize: 24, fontWeight: 'bold', marginTop: 10 },
-    eslogan: { fontSize: 14, color: '#666', marginTop: 5 },
+    titulo: { fontSize: 24, fontWeight: 'bold', marginTop: 10, color: Colores.oscuro },
+    eslogan: { fontSize: 14, color: Colores.secundario, marginTop: 5 },
     seccion: { marginBottom: 15 },
-    subtitulo: { fontSize: 20, fontWeight: 'bold', marginBottom: 10 },
+    subtitulo: { fontSize: 20, fontWeight: 'bold', marginBottom: 10, color: Colores.oscuro },
     mapa: { width: '100%', height: 250, borderRadius: 10, overflow: 'hidden' },
     webmap: { flex: 1 },
     tarjeta: {
         width: '100%', height: 280, borderRadius: 10, flexDirection: 'row', padding: 10,
-        elevation: 10, shadowColor: '#000', shadowOffset: { width: 2, height: 2 },
-        shadowOpacity: 0.5, shadowRadius: 5, marginBottom: 10, backgroundColor: '#fff',
+        elevation: 10, shadowColor: Colores.oscuro, shadowOffset: { width: 2, height: 2 },
+        shadowOpacity: 0.3, shadowRadius: 5, marginBottom: 10, backgroundColor: Colores.blanco,
     },
     imgProducto: { width: '50%', height: '100%', borderRadius: 10 },
     info: { padding: 10, flex: 1 },
-    nombre: { fontSize: 20, fontWeight: 'bold', textAlign: 'center' },
-    descripcion: { padding: 5, fontSize: 16, textAlign: 'left', marginBottom: 10, marginTop: 10 },
-    precio: { fontSize: 18, fontWeight: 'bold', textAlign: 'center', marginBottom: 5 },
-    boton: { backgroundColor: '#000', padding: 10, borderRadius: 15, marginTop: 10 },
-    textoBoton: { color: '#fff', textAlign: 'center' },
+    nombre: { fontSize: 20, fontWeight: 'bold', textAlign: 'center', color: Colores.oscuro },
+    descripcion: { padding: 5, fontSize: 16, textAlign: 'left', marginBottom: 10, marginTop: 10, color: Colores.principal },
+    precio: { fontSize: 18, fontWeight: 'bold', textAlign: 'center', marginBottom: 5, color: Colores.secundario },
+    boton: { backgroundColor: Colores.oscuro, padding: 10, borderRadius: 15, marginTop: 10 },
+    textoBoton: { color: Colores.blanco, textAlign: 'center' },
 })

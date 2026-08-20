@@ -11,6 +11,7 @@ import ContactosScreen from './src/tp2docuatrimestre/ContactosScreen'
 
 import Logo from './src/Media/Logo/Logo.png'
 import Fondo from './src/Media/Fondo/Fondo.gif'
+import Colores from './src/lib/Colores'
 
 const Drawer = createDrawerNavigator();
 
@@ -81,8 +82,8 @@ export default function App() {
             <Drawer.Navigator
                 drawerContent={(props) => <DrawerContent {...props} />}
                 screenOptions={{
-                    headerStyle: { backgroundColor: '#fff', elevation: 5 },
-                    headerTintColor: '#000',
+                    headerStyle: { backgroundColor: Colores.principal, elevation: 5 },
+                    headerTintColor: Colores.blanco,
                     headerTitleStyle: { fontWeight: 'bold' },
                 }}
             >
@@ -105,11 +106,12 @@ const styles = StyleSheet.create({
     },
     drawer: {
         flex: 1,
+        backgroundColor: Colores.fondo,
     },
     drawerHeader: {
         padding: 20,
         paddingTop: 50,
-        backgroundColor: '#000',
+        backgroundColor: Colores.oscuro,
         alignItems: 'center',
     },
     drawerLogo: {
@@ -118,7 +120,7 @@ const styles = StyleSheet.create({
         borderRadius: 40,
     },
     drawerTitulo: {
-        color: '#fff',
+        color: Colores.blanco,
         fontSize: 20,
         fontWeight: 'bold',
         marginTop: 10,
@@ -130,11 +132,13 @@ const styles = StyleSheet.create({
         paddingVertical: 14,
         paddingHorizontal: 20,
         fontSize: 16,
+        color: Colores.oscuro,
         borderBottomWidth: 1,
-        borderBottomColor: '#eee',
+        borderBottomColor: Colores.celeste,
     },
     drawerItemActive: {
-        backgroundColor: '#f0f0f0',
+        backgroundColor: Colores.rosa,
         fontWeight: 'bold',
+        color: Colores.oscuro,
     },
 });

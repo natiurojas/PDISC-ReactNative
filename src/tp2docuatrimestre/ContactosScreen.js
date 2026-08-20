@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View, ScrollView, TouchableOpacity, Linking } from 'react-native'
 import React from 'react'
+import Colores from '../lib/Colores'
 
 const ContactosScreen = () => {
     return (
@@ -37,14 +38,14 @@ const ContactosScreen = () => {
 export default ContactosScreen
 
 const styles = StyleSheet.create({
-    container: { flex: 1, padding: 20 },
-    titulo: { fontSize: 24, fontWeight: 'bold', textAlign: 'center', marginBottom: 20 },
+    container: { flex: 1, padding: 20, backgroundColor: Colores.fondo },
+    titulo: { fontSize: 24, fontWeight: 'bold', textAlign: 'center', marginBottom: 20, color: Colores.oscuro },
     card: {
-        backgroundColor: '#fff', padding: 15, borderRadius: 10, marginBottom: 15,
-        elevation: 5, shadowColor: '#000', shadowOffset: { width: 2, height: 2 },
-        shadowOpacity: 0.3, shadowRadius: 4,
+        backgroundColor: Colores.blanco, padding: 15, borderRadius: 10, marginBottom: 15,
+        elevation: 5, shadowColor: Colores.oscuro, shadowOffset: { width: 2, height: 2 },
+        shadowOpacity: 0.2, shadowRadius: 4,
     },
-    cardTitulo: { fontSize: 18, fontWeight: 'bold', marginBottom: 8 },
-    cardTexto: { fontSize: 16, color: '#333', lineHeight: 22 },
-    cardLink: { fontSize: 16, color: '#1a73e8', textDecorationLine: 'underline', lineHeight: 22 },
+    cardTitulo: { fontSize: 18, fontWeight: 'bold', marginBottom: 8, color: Colores.secundario },
+    cardTexto: { fontSize: 16, color: Colores.principal, lineHeight: 22 },
+    cardLink: { fontSize: 16, color: Colores.rosa, textDecorationLine: 'underline', lineHeight: 22 },
 })

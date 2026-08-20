@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View, ScrollView, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
+import Colores from '../lib/Colores'
 
 import Producto1 from '../Media/Productos/a.jpg'
 import Producto2 from '../Media/Productos/b.png'
@@ -39,18 +40,18 @@ const ProductosScreen = () => {
 export default ProductosScreen
 
 const styles = StyleSheet.create({
-    container: { flex: 1, paddingHorizontal: 10, paddingVertical: 10 },
-    titulo: { fontSize: 24, fontWeight: 'bold', textAlign: 'center', marginBottom: 15 },
+    container: { flex: 1, paddingHorizontal: 10, paddingVertical: 10, backgroundColor: Colores.fondo },
+    titulo: { fontSize: 24, fontWeight: 'bold', textAlign: 'center', marginBottom: 15, color: Colores.oscuro },
     tarjeta: {
         width: '100%', height: 280, borderRadius: 10, flexDirection: 'row', padding: 10,
-        elevation: 10, shadowColor: '#000', shadowOffset: { width: 2, height: 2 },
-        shadowOpacity: 0.5, shadowRadius: 5, marginBottom: 10, backgroundColor: '#fff',
+        elevation: 10, shadowColor: Colores.oscuro, shadowOffset: { width: 2, height: 2 },
+        shadowOpacity: 0.3, shadowRadius: 5, marginBottom: 10, backgroundColor: Colores.blanco,
     },
     imgProducto: { width: '50%', height: '100%', borderRadius: 10 },
     info: { padding: 10, flex: 1 },
-    nombre: { fontSize: 20, fontWeight: 'bold', textAlign: 'center' },
-    descripcion: { padding: 5, fontSize: 16, textAlign: 'left', marginBottom: 10, marginTop: 10 },
-    precio: { fontSize: 18, fontWeight: 'bold', textAlign: 'center', marginBottom: 5 },
-    boton: { backgroundColor: '#000', padding: 10, borderRadius: 15, marginTop: 10 },
-    textoBoton: { color: '#fff', textAlign: 'center' },
+    nombre: { fontSize: 20, fontWeight: 'bold', textAlign: 'center', color: Colores.oscuro },
+    descripcion: { padding: 5, fontSize: 16, textAlign: 'left', marginBottom: 10, marginTop: 10, color: Colores.principal },
+    precio: { fontSize: 18, fontWeight: 'bold', textAlign: 'center', marginBottom: 5, color: Colores.secundario },
+    boton: { backgroundColor: Colores.oscuro, padding: 10, borderRadius: 15, marginTop: 10 },
+    textoBoton: { color: Colores.blanco, textAlign: 'center' },
 })

@@ -4,6 +4,7 @@ import React from 'react'
 import IcoHome from '../Media/Footer/a.png'
 import IcoProductos from '../Media/Footer/b.png'
 import IcoNosotros from '../Media/Footer/c.png'
+import Colores from '../lib/Colores'
 
 const Footer = ({ setPaginas }) => {
     return (
@@ -17,7 +18,7 @@ const Footer = ({ setPaginas }) => {
                     resizeMode='cover'
                     style={styles.imgIcono}
                 />
-                <Text>Home</Text>
+                <Text style={styles.textoIcono}>Home</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
@@ -29,7 +30,7 @@ const Footer = ({ setPaginas }) => {
                     resizeMode='cover'
                     style={styles.imgIcono}
                 />
-                <Text>Productos</Text>
+                <Text style={styles.textoIcono}>Productos</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
@@ -41,7 +42,7 @@ const Footer = ({ setPaginas }) => {
                     resizeMode='cover'
                     style={styles.imgIcono}
                 />
-                <Text>Nosotros</Text>
+                <Text style={styles.textoIcono}>Nosotros</Text>
             </TouchableOpacity>
         </View>
     )
@@ -53,13 +54,21 @@ const styles = StyleSheet.create({
     footer: {
         flexDirection: 'row',
         justifyContent: 'center',
+        backgroundColor: Colores.principal,
+        paddingVertical: 8,
     },
     imgIcono: {
-        width: 65,
-        height: 65,
+        width: 50,
+        height: 50,
     },
     boton: {
-        marginLeft: 10,
-        marginBottom: 10,
+        marginHorizontal: 15,
+        marginBottom: 5,
+        alignItems: 'center',
+    },
+    textoIcono: {
+        color: Colores.blanco,
+        fontSize: 12,
+        marginTop: 2,
     },
 })
