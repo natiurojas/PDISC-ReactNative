@@ -1,16 +1,17 @@
-import { StyleSheet, text, views, image } from "react-native/types_generated/index";
+import { StyleSheet, text, view, ScrollView, Image } from "react-native/types_generated/index";
 import React from 'react'
 
 import Fondo from '../Media/Fondo/Tienda.png'
 const Nosotros = () => {
     return (
-        <scrollview style={styles.Nosotros}>
-            <view style={styles.Info}
+        <ScrollView style={styles.Nosotros}>
+            <view style={styles.Info}>
             <Image
             sources={Fondo}
             resizeMode='cover'
             style={styles.Logo}
             />
+            </view>
             <view style={styles.Card}>
             <text>somos una empresa dedicada a
                  ofrecer los mejores productos a nuestros clientes.</text>
@@ -20,6 +21,6 @@ const Nosotros = () => {
             <text style={styles.titulo}>Visión</text>
             <text style={styles.texto}>Nuestra visión es ser reconocidos como líderes en el mercado, destacando por nuestra innovación, compromiso con la calidad y responsabilidad social, generando valor para nuestros clientes, empleados y la sociedad en general.</text>
             </view>
-        </scrollview>
+        </ScrollView>
     )
 }

@@ -1,0 +1,96 @@
+import { StyleSheet, Text, View, ScrollView, Image, TouchableOpacity } from 'react-native'
+import React from 'react'
+import { WebView } from 'react-native-webview'
+import Header from '../Components/Header'
+import Footer from '../Components/Footer'
+import Producto1 from '../Media/Productos/a.jpg'
+import Producto2 from '../Media/Productos/b.png'
+import Producto3 from '../Media/Productos/c.png'
+import Logo from '../Media/Logo/Logo.png'
+
+const ultimos3 = [
+    { nombre: 'Auricular 01', descripcion: 'El mejor Auricular del Mercado. Sonido envolvente, excelente calidad y el mejor precio', precio: '$49.990', imagen: Producto1 },
+    { nombre: 'Auricular 04', descripcion: 'Graves potentes y agudos claros. Diseño moderno con materiales premium', precio: '$59.990', imagen: Producto2 },
+    { nombre: 'Auricular 05', descripcion: 'Máxima portabilidad con estuche de carga incluido y conectividad Bluetooth 5.3', precio: '$29.990', imagen: Producto3 },
+]
+
+const MAPA_HTML = `
+<!DOCTYPE html>
+<html>
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
+<body style="margin:0;padding:0">
+  <iframe
+    width="100%" height="100%" frameborder="0" style="border:0;width:100%;height:100%"
+    src="https://www.openstreetmap.org/export/embed.html?bbox=-58.39,-34.62,-58.35,-34.60&layer=mapnik&marker=-34.61,-58.37"
+    allowfullscreen>
+  </iframe>
+</body>
+</html>
+`
+
+const HomeScreen = ({ navigation }) => {
+    return (
+        <View style={styles.container}>
+            <Header />
+            <ScrollView contentContainerStyle={styles.contenido}>
+                <View style={styles.logoContainer}>
+                    <Image source={Logo} resizeMode='contain' style={styles.logo} />
+                    <Text style={styles.titulo}>TecnoAir</Text>
+                    <Text style={styles.eslogan}>Apaga el mundo, enciende la música</Text>
+                </View>
+
+                <View style={styles.seccion}>
+                    <Text style={styles.subtitulo}>Ubicación</Text>
+                    <View style={styles.mapa}>
+                        <WebView source={{ html: MAPA_HTML }} style={styles.webmap} />
+                    </View>
+                </View>
+
+                <View style={styles.seccion}>
+                    <Text style={styles.subtitulo}>Últimos Productos</Text>
+                    {ultimos3.map((producto, index) => (
+                        <View key={index} style={styles.tarjeta}>
+                            <Image source={producto.imagen} resizeMode='cover' style={styles.imgProducto} />
+                            <View style={styles.info}>
+                                <Text style={styles.nombre}>{producto.nombre}</Text>
+                                <Text style={styles.descripcion}>{producto.descripcion}</Text>
+                                <Text style={styles.precio}>{producto.precio}</Text>
+                                <TouchableOpacity style={styles.boton}>
+                                    <Text style={styles.textoBoton}>Agregar al Carrito</Text>
+                                </TouchableOpacity>
+                            </View>
+                        </View>
+                    ))}
+                </View>
+            </ScrollView>
+            <Footer setPaginas={(p) => navigation.navigate(p)} />
+        </View>
+    )
+}
+
+export default HomeScreen
+
+const styles = StyleSheet.create({
+    container: { flex: 1 },
+    contenido: { paddingHorizontal: 10, paddingBottom: 20 },
+    logoContainer: { alignItems: 'center', paddingVertical: 20 },
+    logo: { width: 120, height: 120, borderRadius: 60 },
+    titulo: { fontSize: 24, fontWeight: 'bold', marginTop: 10 },
+    eslogan: { fontSize: 14, color: '#666', marginTop: 5 },
+    seccion: { marginBottom: 15 },
+    subtitulo: { fontSize: 20, fontWeight: 'bold', marginBottom: 10 },
+    mapa: { width: '100%', height: 250, borderRadius: 10, overflow: 'hidden' },
+    webmap: { flex: 1 },
+    tarjeta: {
+        width: '100%', height: 280, borderRadius: 10, flexDirection: 'row', padding: 10,
+        elevation: 10, shadowColor: '#000', shadowOffset: { width: 2, height: 2 },
+        shadowOpacity: 0.5, shadowRadius: 5, marginBottom: 10, backgroundColor: '#fff',
+    },
+    imgProducto: { width: '50%', height: '100%', borderRadius: 10 },
+    info: { padding: 10, flex: 1 },
+    nombre: { fontSize: 20, fontWeight: 'bold', textAlign: 'center' },
+    descripcion: { padding: 5, fontSize: 16, textAlign: 'left', marginBottom: 10, marginTop: 10 },
+    precio: { fontSize: 18, fontWeight: 'bold', textAlign: 'center', marginBottom: 5 },
+    boton: { backgroundColor: '#000', padding: 10, borderRadius: 15, marginTop: 10 },
+    textoBoton: { color: '#fff', textAlign: 'center' },
+})
