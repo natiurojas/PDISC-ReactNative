@@ -2,7 +2,7 @@ import { Text, StyleSheet, View, Image, TouchableOpacity } from 'react-native'
 import React, { Component } from 'react'
 import Colores from '../lib/Colores'
 
-import Producto1 from '../Media/Productos/a.jpg'
+import Producto1 from '../Media/Productos/a.gif'
 
 export default class Tarjetas extends Component {
     render() {

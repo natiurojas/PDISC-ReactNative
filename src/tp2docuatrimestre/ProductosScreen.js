@@ -2,18 +2,14 @@ import { StyleSheet, Text, View, ScrollView, Image, TouchableOpacity } from 'rea
 import React from 'react'
 import Colores from '../lib/Colores'
 
-import Producto1 from '../Media/Productos/a.jpg'
-import Producto2 from '../Media/Productos/b.png'
-import Producto3 from '../Media/Productos/c.png'
-import Producto4 from '../Media/Productos/d.png'
-import Producto5 from '../Media/Productos/e.png'
+import Producto1 from '../Media/Productos/a.gif'
+import Producto2 from '../Media/Productos/b.gif'
+import Producto3 from '../Media/Productos/c.jpeg'
 
 const productos = [
     { nombre: 'Auricular 01', descripcion: 'El mejor Auricular del Mercado. Sonido envolvente, excelente calidad y el mejor precio', precio: '$49.990', imagen: Producto1 },
     { nombre: 'Auricular 02', descripcion: 'Sonido de alta fidelidad con cancelación de ruido activa y batería de larga duración', precio: '$69.990', imagen: Producto2 },
     { nombre: 'Auricular 03', descripcion: 'Inalámbrico, liviano y cómodo. Ideal para el día a día y los viajes', precio: '$39.990', imagen: Producto3 },
-    { nombre: 'Auricular 04', descripcion: 'Graves potentes y agudos claros. Diseño moderno con materiales premium', precio: '$59.990', imagen: Producto4 },
-    { nombre: 'Auricular 05', descripcion: 'Máxima portabilidad con estuche de carga incluido y conectividad Bluetooth 5.3', precio: '$29.990', imagen: Producto5 },
 ]
 
 const ProductosScreen = () => {

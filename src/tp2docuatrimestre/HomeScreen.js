@@ -4,9 +4,9 @@ import { WebView } from 'react-native-webview'
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
 import Colores from '../lib/Colores'
-import Producto1 from '../Media/Productos/a.jpg'
-import Producto2 from '../Media/Productos/b.png'
-import Producto3 from '../Media/Productos/c.png'
+import Producto1 from '../Media/Productos/a.gif'
+import Producto2 from '../Media/Productos/b.gif'
+import Producto3 from '../Media/Productos/c.jpeg'
 import Logo from '../Media/Logo/Logo.png'
 
 const ultimos3 = [
