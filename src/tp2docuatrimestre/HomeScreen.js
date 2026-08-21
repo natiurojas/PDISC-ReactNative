@@ -42,9 +42,17 @@ const HomeScreen = ({ navigation }) => {
 
                 <View style={styles.seccion}>
                     <Text style={styles.subtitulo}>Ubicación</Text>
-                    <View style={styles.mapa}>
-                        <WebView source={{ html: MAPA_HTML }} style={styles.webmap} />
-                    </View>
+                    yo lo logre arreglar, lo puse asi:
+<View style={styles.mapa}>
+                    <iframe
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=-58.39,-34.62,-58.35,-34.60&layer=mapnik&marker=-34.61,-58.37"
+                        style={{
+                            width: '100%',
+                            height: '100%',
+                            border: 0
+                        }}
+                    />
+                </View>
                 </View>
 
                 <View style={styles.seccion}>
