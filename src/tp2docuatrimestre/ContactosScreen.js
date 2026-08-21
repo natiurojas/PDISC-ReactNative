@@ -2,6 +2,7 @@ import { StyleSheet, Text, View, ScrollView, TouchableOpacity, Linking } from 'r
 import React from 'react'
 import Colores from '../lib/Colores'
 
+// Función flecha
 const ContactosScreen = () => {
     return (
         <ScrollView contentContainerStyle={styles.container}>
