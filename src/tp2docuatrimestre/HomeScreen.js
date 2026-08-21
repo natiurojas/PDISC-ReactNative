@@ -42,7 +42,6 @@ const HomeScreen = ({ navigation }) => {
 
                 <View style={styles.seccion}>
                     <Text style={styles.subtitulo}>Ubicación</Text>
-                    yo lo logre arreglar, lo puse asi:
 <View style={styles.mapa}>
                     <iframe
                         src="https://www.openstreetmap.org/export/embed.html?bbox=-58.39,-34.62,-58.35,-34.60&layer=mapnik&marker=-34.61,-58.37"
