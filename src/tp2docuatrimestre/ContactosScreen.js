@@ -9,7 +9,7 @@ const ContactosScreen = () => {
 
             <View style={styles.card}>
                 <Text style={styles.cardTitulo}>Dirección</Text>
-                <Text style={styles.cardTexto}>Av. Corrientes 1234, Buenos Aires, Argentina</Text>
+                <Text style={styles.cardTexto}>Av. Alicia Moreau 1234, Buenos Aires, Argentina</Text>
             </View>
 
             <View style={styles.card}>
