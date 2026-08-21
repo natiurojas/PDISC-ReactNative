@@ -15,8 +15,8 @@ export default class Tarjetas extends Component {
                         style={styles.imgProducto}
                     />
                     <View style={styles.info}>
-                        <Text style={styles.Nombre}>Auricular 01</Text>
-                        <Text style={styles.infoDes}>El mejor Auricular del Mercado. Sonido envolvente, excelente calidad y el mejor precio</Text>
+                        <Text style={styles.Nombre}>Kirby Arride(2003)</Text>
+                        <Text style={styles.infoDes}>Es un juego de carreras protagonizado por Kirby, desarrollado por HAL Laboratory y publicado por Nintendo</Text>
                         <TouchableOpacity style={styles.boton}>
                             <Text style={styles.titulo}>Agregar al Carrito</Text>
                         </TouchableOpacity>

@@ -14,8 +14,8 @@ const Header = () => {
                     style={styles.logo}
                 />
                 <View style={styles.menu}>
-                    <Text style={styles.Titulo}>TecnoAir</Text>
-                    <Text style={styles.Eslogan}>Apaga el mundo, enciende la música</Text>
+                    <Text style={styles.Titulo}>GameNova</Text>
+                    <Text style={styles.Eslogan}>Nivelá tu colección</Text>
                 </View>
                 <View style={styles.responsive}>
                     <Text style={styles.icono}>≡</Text>
