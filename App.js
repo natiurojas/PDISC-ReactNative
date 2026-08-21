@@ -20,7 +20,7 @@ function DrawerContent(props) {
         <View style={styles.drawer}>
             <View style={styles.drawerHeader}>
                 <Image source={Logo} style={styles.drawerLogo} resizeMode='contain' />
-                <Text style={styles.drawerTitulo}>TecnoAir</Text>
+                <Text style={styles.drawerTitulo}>GameNova</Text>
             </View>
             <View style={styles.drawerItems}>
                 <DrawerItem
@@ -87,7 +87,7 @@ export default function App() {
                     headerTitleStyle: { fontWeight: 'bold' },
                 }}
             >
-                <Drawer.Screen name="Home" component={HomeScreen} options={{ title: 'TecnoAir - Inicio' }} />
+                <Drawer.Screen name="Home" component={HomeScreen} options={{ title: 'GameNova - Inicio' }} />
                 <Drawer.Screen name="Nosotros" component={NosotrosScreen} options={{ title: 'Nosotros' }} />
                 <Drawer.Screen name="Productos" component={ProductosScreen} options={{ title: 'Productos' }} />
                 <Drawer.Screen name="Contactos" component={ContactosScreen} options={{ title: 'Contactos' }} />
