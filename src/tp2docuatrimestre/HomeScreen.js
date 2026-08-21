@@ -10,9 +10,9 @@ import Producto3 from '../Media/Productos/c.jpeg'
 import Logo from '../Media/Logo/Logo.png'
 
 const ultimos3 = [
-    { nombre: 'Auricular 01', descripcion: 'El mejor Auricular del Mercado. Sonido envolvente, excelente calidad y el mejor precio', precio: '$49.990', imagen: Producto1 },
-    { nombre: 'Auricular 04', descripcion: 'Graves potentes y agudos claros. Diseño moderno con materiales premium', precio: '$59.990', imagen: Producto2 },
-    { nombre: 'Auricular 05', descripcion: 'Máxima portabilidad con estuche de carga incluido y conectividad Bluetooth 5.3', precio: '$29.990', imagen: Producto3 },
+    { nombre: 'Kirby Arride (2003)', descripcion: 'Es un juego de carreras protagonizado por Kirby, desarrollado por HAL Laboratory y publicado por Nintendo favicon para Nintendo GameCube. Salió en Japón el 11 de julio de 2003 y después en el resto del mundo.', precio: '$49.990', imagen: Producto1 },
+    { nombre: 'Sonic 2', descripcion: 'Juego de plataformas desarrollado por Sega. Es la secuela directa de Sonic the Hedgehog y presenta nuevos niveles y personajes.', precio: '$59.990', imagen: Producto2 },
+    { nombre: 'Resident Evil 3', descripcion: 'Juego de survival horror desarrollado por Capcom. Es la secuela de Resident Evil 2 y presenta una narrativa más oscura y una jugabilidad mejorada.', precio: '$29.990', imagen: Producto3 },
 ]
 
 const MAPA_HTML = `
@@ -36,8 +36,8 @@ const HomeScreen = ({ navigation }) => {
             <ScrollView contentContainerStyle={styles.contenido}>
                 <View style={styles.logoContainer}>
                     <Image source={Logo} resizeMode='contain' style={styles.logo} />
-                    <Text style={styles.titulo}>TecnoAir</Text>
-                    <Text style={styles.eslogan}>Apaga el mundo, enciende la música</Text>
+                    <Text style={styles.titulo}>GameNova</Text>
+                    <Text style={styles.eslogan}>Nivelá tu colección</Text>
                 </View>
 
                 <View style={styles.seccion}>

@@ -21,8 +21,8 @@ const ContactosScreen = () => {
 
             <View style={styles.card}>
                 <Text style={styles.cardTitulo}>Email</Text>
-                <TouchableOpacity onPress={() => Linking.openURL('mailto:info@tecnoair.com')}>
-                    <Text style={styles.cardLink}>info@tecnoair.com</Text>
+                <TouchableOpacity onPress={() => Linking.openURL('mailto:info@gamenova.com')}>
+                    <Text style={styles.cardLink}>info@gamenova.com</Text>
                 </TouchableOpacity>
             </View>
 
@@ -38,14 +38,41 @@ const ContactosScreen = () => {
 export default ContactosScreen
 
 const styles = StyleSheet.create({
-    container: { flex: 1, padding: 20, backgroundColor: Colores.fondo },
-    titulo: { fontSize: 24, fontWeight: 'bold', textAlign: 'center', marginBottom: 20, color: Colores.oscuro },
+    container: { 
+        flex: 1, 
+        padding: 20, 
+        backgroundColor: Colores.fondo },
+    titulo: { 
+        fontSize: 24, 
+        fontWeight: 'bold', 
+        textAlign: 'center', 
+        marginBottom: 20, 
+        color: Colores.oscuro },
     card: {
-        backgroundColor: Colores.blanco, padding: 15, borderRadius: 10, marginBottom: 15,
-        elevation: 5, shadowColor: Colores.oscuro, shadowOffset: { width: 2, height: 2 },
-        shadowOpacity: 0.2, shadowRadius: 4,
+        backgroundColor: Colores.blanco, 
+        padding: 15, 
+        borderRadius: 10, 
+        marginBottom: 15,
+        elevation: 5, 
+        shadowColor: Colores.oscuro, 
+        shadowOffset: { 
+            width: 2, 
+            height: 2 },
+        shadowOpacity: 0.2, 
+        shadowRadius: 4,
     },
-    cardTitulo: { fontSize: 18, fontWeight: 'bold', marginBottom: 8, color: Colores.secundario },
-    cardTexto: { fontSize: 16, color: Colores.principal, lineHeight: 22 },
-    cardLink: { fontSize: 16, color: Colores.rosa, textDecorationLine: 'underline', lineHeight: 22 },
+    cardTitulo: { 
+        fontSize: 18, 
+        fontWeight: 'bold', 
+        marginBottom: 8, 
+        color: Colores.secundario },
+    cardTexto: { 
+        fontSize: 16, 
+        color: Colores.principal, 
+        lineHeight: 22 },
+    cardLink: { 
+        fontSize: 16, 
+        color: Colores.rosa, 
+        textDecorationLine: 'underline', 
+        lineHeight: 22 },
 })
